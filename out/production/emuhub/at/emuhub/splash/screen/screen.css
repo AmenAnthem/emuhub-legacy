@@ -1,0 +1,9 @@
+root {
+    display: block;
+}
+#root {
+    -fx-background-color: #303030;
+}
+#splash {
+    -fx-image: url("splash.png");
+}

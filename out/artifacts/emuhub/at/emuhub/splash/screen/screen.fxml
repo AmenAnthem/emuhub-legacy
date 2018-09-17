@@ -1,0 +1,10 @@
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="at.emuhub.splash.screen.EmuhubSplashScreenController"
+            fx:id="root"
+            prefWidth="1920"
+            prefHeight="1080"
+            stylesheets="@screen.css">
+    <ImageView fx:id="splash"/>
+</AnchorPane>

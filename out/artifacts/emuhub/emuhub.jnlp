@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="emuhub.jnlp">
+    <information>
+        <title>Emuhub</title>
+        <vendor>AmenAnthem</vendor>
+        <description>none</description>
+        <offline-allowed/>
+    </information>
+    <update check="background"/>
+    <resources>
+        <j2se version="10.0.2+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="emuhub.jar" size="684297" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="1920" height="1080" main-class="at.emuhub.core.EmuhubApplication" name="EmuhubApplication"/>
+</jnlp>
+

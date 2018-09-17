@@ -1,0 +1,19 @@
+root {
+    display: block;
+}
+#root {
+    -fx-background-color: #303030;
+    -fx-background-image: url("background.png");
+}
+#header {
+    -fx-image: url("header.png");
+}
+#footer {
+    -fx-image: url("footer.png");
+}
+#previous {
+    -fx-opacity: 0.5;
+}
+#next {
+    -fx-opacity: 0.5;
+}

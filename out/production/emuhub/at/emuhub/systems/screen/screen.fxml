@@ -1,0 +1,24 @@
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="at.emuhub.systems.screen.EmuhubSystemsScreenController"
+            fx:id="root"
+            prefWidth="1920"
+            prefHeight="1080"
+            stylesheets="@screen.css">
+    <top>
+        <ImageView fx:id="header" BorderPane.alignment="CENTER" fitWidth="1920" fitHeight="200"/>
+    </top>
+    <bottom>
+        <ImageView fx:id="footer" BorderPane.alignment="CENTER" fitWidth="1920" fitHeight="200"/>
+    </bottom>
+    <center>
+        <ImageView fx:id="current" BorderPane.alignment="CENTER" fitWidth="500" fitHeight="500"/>
+    </center>
+    <left>
+        <ImageView fx:id="previous" BorderPane.alignment="CENTER" fitWidth="300" fitHeight="300"/>
+    </left>
+    <right>
+        <ImageView fx:id="next" BorderPane.alignment="CENTER" fitWidth="300" fitHeight="300"/>
+    </right>
+</BorderPane>

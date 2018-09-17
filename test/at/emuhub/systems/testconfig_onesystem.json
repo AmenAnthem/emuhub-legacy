@@ -1,0 +1,23 @@
+{
+  "systems": [
+    {
+      "id": "example",
+      "name": "Example",
+      "romFolderPath": "%HOMEPATH%/emuhub/roms/example",
+      "fileExtensions": [
+        ".example",
+        ".EXAMPLE"
+      ],
+      "commands": [
+        {
+          "name": "Example",
+          "command": "%HOMEPATH%/emuhub/systems/example/example.exe",
+          "arguments": [
+            "-example",
+            "example"
+          ]
+        }
+      ]
+    }
+  ]
+}

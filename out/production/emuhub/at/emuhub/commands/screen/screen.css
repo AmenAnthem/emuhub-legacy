@@ -1,0 +1,26 @@
+root {
+    display: block;
+}
+#root {
+    -fx-background-color: #303030;
+}
+#footer {
+    -fx-image: url("footer.png");
+}
+.list-view {
+    -fx-orientation: vertical;
+    -fx-background-color: transparent;
+    -fx-font-size: 40;
+}
+.list-view .scroll-bar {
+    -fx-scale-x: 0;
+}
+.list-cell {
+    -fx-font-family: "Yu Gothic Light";
+    -fx-background-color: transparent;
+    -fx-text-fill: #909090;
+}
+.list-cell:filled:selected {
+    -fx-background-color: #909090;
+    -fx-text-fill: #101010;
+}
