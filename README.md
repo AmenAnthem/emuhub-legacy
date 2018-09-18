@@ -90,9 +90,9 @@ Keyboard controls:
 Next is the commands screen. Your emulators are displayed here. You can switch through your emulators with your keyboard or your gamepad. Select an emulator to go to start it's command.
 
 Gamepad controls:
-- left or A: go to previous game
-- right or D: go to next game
-- Enter or Space: select game
+- left or A: go to previous emulator
+- right or D: go to next emulator
+- Enter or Space: select emulator
 - ESC or Backspace: go back to the systems screen
 
 Keyboard controls:
