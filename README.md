@@ -12,7 +12,7 @@ You can also get the IDEA module directly from this repository.
 To be able to use a gamepad in Emuhub you need to add the jinput dlls (which are available on github) into the folder 'natives'. 
 
 ### Configuring systems
-systems.json is used to to get the informations on which systems are supposedto be displayed, and which commands are supported for each system.
+systems.json is used to to get the informations on which systems are supposed to be displayed, and which commands are supported for each system.
 
 If you start the program without this file it will be generated automatically with an example inside.
 
@@ -68,6 +68,8 @@ Keyboard controls:
 - B: close Emuhub
 
 Next is the games screen. Your games are displayed here. You can switch through your games with your keyboard or your gamepad. Select a game to go to the commands screen.
+
+If you only have one command configured for the system it will be started without going to the commands screen.
 
 Gamepad controls:
 - left or A: go to previous game
