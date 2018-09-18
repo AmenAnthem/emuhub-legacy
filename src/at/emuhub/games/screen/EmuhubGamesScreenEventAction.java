@@ -13,7 +13,7 @@ enum EmuhubGamesScreenEventAction {
     SELECT_GAME(Set.of(KeyCode.ENTER, KeyCode.SPACE), Set.of(EmuhubGamepadButton.A)) {
         @Override
         void execute(EmuhubGamesScreenController controller) {
-            controller.gotoCommandsScreen();
+            controller.gotoCommandsScreenOrRunSingleCommand();
         }
     },
     GOTO_PREVIOUS_GAME(Set.of(KeyCode.UP, KeyCode.W), Set.of(EmuhubGamepadButton.UP)) {

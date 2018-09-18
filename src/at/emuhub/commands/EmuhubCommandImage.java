@@ -1,6 +1,5 @@
 package at.emuhub.commands;
 
-import at.emuhub.systems.EmuhubSystemCommand;
 import javafx.scene.image.Image;
 
 import java.io.IOException;
@@ -11,7 +10,7 @@ import java.nio.file.Paths;
 public enum EmuhubCommandImage {
     SELECTION {
         @Override
-        public Image find(EmuhubSystemCommand command) {
+        public Image find(EmuhubCommand command) {
             return find(command.getName());
         }
     };
@@ -29,5 +28,5 @@ public enum EmuhubCommandImage {
         }
     }
 
-    public abstract Image find(EmuhubSystemCommand command);
+    public abstract Image find(EmuhubCommand command);
 }

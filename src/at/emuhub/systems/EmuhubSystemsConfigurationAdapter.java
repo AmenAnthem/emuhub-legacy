@@ -1,5 +1,6 @@
 package at.emuhub.systems;
 
+import at.emuhub.commands.EmuhubCommand;
 import at.emuhub.core.VisibleForTesting;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -47,12 +48,12 @@ class EmuhubSystemsConfigurationAdapter {
     }
 
     @VisibleForTesting
-    List<EmuhubSystemCommand> getCommands(JSONArray commandsJson) {
-        List<EmuhubSystemCommand> commands = new ArrayList<>();
+    List<EmuhubCommand> getCommands(JSONArray commandsJson) {
+        List<EmuhubCommand> commands = new ArrayList<>();
         for (int i = 0; i < commandsJson.length(); i++) {
             JSONObject commandJson = commandsJson.getJSONObject(i);
             List<String> arguments = getArguments(commandJson.getJSONArray("arguments"));
-            commands.add(EmuhubSystemCommand.createCommand(commandJson.getString("name"), commandJson.getString("command"), arguments));
+            commands.add(EmuhubCommand.createCommand(commandJson.getString("name"), commandJson.getString("command"), arguments));
         }
         return commands;
     }

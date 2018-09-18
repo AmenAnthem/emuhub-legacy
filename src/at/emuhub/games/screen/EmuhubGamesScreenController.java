@@ -1,5 +1,6 @@
 package at.emuhub.games.screen;
 
+import at.emuhub.commands.EmuhubCommandExecutor;
 import at.emuhub.commands.screen.EmuhubCommandsScreenController;
 import at.emuhub.core.EmuhubScreen;
 import at.emuhub.games.EmuhubGame;
@@ -16,6 +17,7 @@ import javafx.scene.input.InputEvent;
 import javafx.scene.layout.BorderPane;
 
 import java.net.URL;
+import java.nio.file.Path;
 import java.util.ResourceBundle;
 
 public class EmuhubGamesScreenController implements Initializable {
@@ -50,13 +52,18 @@ public class EmuhubGamesScreenController implements Initializable {
         gameImage.setImage(EmuhubGameImage.SELECTION.find(selectionModel.getSelectedItem()));
     }
 
-    void gotoCommandsScreen() {
+    void gotoCommandsScreenOrRunSingleCommand() {
+        Path romPath = gameList.getSelectionModel().getSelectedItem().getRomPath();
+        if (system.getCommands().size() == 1) {
+            EmuhubCommandExecutor.createExecutorFor(system.getCommands().iterator().next(), romPath, root).executeCommand();
+            return;
+        }
         EmuhubScreen commandsScreen = EmuhubScreen.COMMANDSSCREEN;
         BorderPane commandsRoot = commandsScreen.getRoot();
         EmuhubCommandsScreenController commandsScreenController = commandsScreen.getController();
         root.getScene().setRoot(commandsRoot);
         commandsRoot.requestFocus();
-        commandsScreenController.updateView(system, gameList.getSelectionModel().getSelectedItem().getRomPath());
+        commandsScreenController.updateView(system, romPath);
     }
 
     void gotoSystemsScreen() {

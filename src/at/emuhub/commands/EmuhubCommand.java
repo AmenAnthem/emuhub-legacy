@@ -1,29 +1,29 @@
-package at.emuhub.systems;
+package at.emuhub.commands;
 
 import at.emuhub.core.VisibleForTesting;
 
 import java.nio.file.Path;
 import java.util.*;
 
-public class EmuhubSystemCommand {
+public class EmuhubCommand {
 
     private final String name;
     private final String command;
     private final Collection<String> arguments;
 
     @VisibleForTesting
-    EmuhubSystemCommand(String name, String command, Collection<String> arguments) {
+    EmuhubCommand(String name, String command, Collection<String> arguments) {
         this.name = name;
         this.command = command;
         this.arguments = Collections.unmodifiableCollection(arguments);
     }
 
-    static EmuhubSystemCommand createCommand(String name, String command, Collection<String> arguments) {
+    public static EmuhubCommand createCommand(String name, String command, Collection<String> arguments) {
         List<String> cleanArguments = new ArrayList<>();
         for (String argument : arguments) {
             cleanArguments.add(cleanUp(argument));
         }
-        return new EmuhubSystemCommand(name, cleanUp(command), cleanArguments);
+        return new EmuhubCommand(name, cleanUp(command), cleanArguments);
     }
 
     public String getName() {

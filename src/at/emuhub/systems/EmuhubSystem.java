@@ -1,5 +1,7 @@
 package at.emuhub.systems;
 
+import at.emuhub.commands.EmuhubCommand;
+
 import java.nio.file.Path;
 import java.util.Collection;
 
@@ -9,7 +11,7 @@ public class EmuhubSystem {
     private String name;
     private Path romFolderPath;
     private Collection<String> fileExtensions;
-    private Collection<EmuhubSystemCommand> commands;
+    private Collection<EmuhubCommand> commands;
 
     private EmuhubSystem() {
         //
@@ -31,7 +33,7 @@ public class EmuhubSystem {
         return fileExtensions;
     }
 
-    public Collection<EmuhubSystemCommand> getCommands() {
+    public Collection<EmuhubCommand> getCommands() {
         return commands;
     }
 
@@ -67,7 +69,7 @@ public class EmuhubSystem {
             return this;
         }
 
-        Builder withCommands(Collection<EmuhubSystemCommand> commands) {
+        Builder withCommands(Collection<EmuhubCommand> commands) {
             system.commands = commands;
             return this;
         }
